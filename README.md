@@ -26,7 +26,7 @@ Another way of identifying objects in images is by labelling them with unique id
 
 There are two basic ways to use this plugin:
 
-![](./Images/Plugin-Window1.png)
+<div style="text-align:center"><img src="./Images/Plugin-Window1.png" width="400"/></div>
 
 1. **Single image**
 
@@ -40,7 +40,7 @@ Generates and automatically saves the ROIs for multiple label images. It allows 
 
 After choosing the &quot;Simple image&quot; button from the main menu, a new window dialog is displayed.
 
-![](./Images/Plugin-Window2.png)
+<div style="text-align:center"><img src="./Images/Plugin-Window2.png" width="400"/></div>
 
 Here, a label image must be selected using the browse button. The label image can be either in &quot;PNG&quot; or &quot;TIF&quot; format. Optionally, the original image corresponding to that label can be provided. The label and original images must have the same pixel resolution. If an original image is included, after pressing the &quot;Next&quot; button this image will be opened. The ROIs will begin populating the image and the progress can be followed through the progress bar. If only a label image is chosen, this image will be opened, and the ROIs will be displayed here. The time for this task to be completed highly depends on the image resolution and the number of objects to be converted to ROIs.
 
@@ -89,7 +89,7 @@ The table/s will be automatically saved to the same location as the original fil
 
 The LabelsToROIs plugin also allows to generate ROIs from multiple image labels. After clicking on the &quot;Multiple Images&quot; button in the main dialog, a new dialog will be displayed. Here, you can browse for a specific location where the label images and, optionally, the original images are located.
 
-![](./Images/Plugin-Window4.png)
+<div style="text-align:center"><img src="./Images/Plugin-Window4.png" width="400"/></div>
 
 In this case, all the label images must be stored in the same folder and must contain the substring &quot;\_label.png&quot; or &quot;\_label.tif&quot; at the end of the filename. If the user also wants to automatically generate measurements from the associated original images, these should also be included in the same folder as the label images. Importantly, the original image should be a TIF file whose filename must be the same as for the label image, except for the &quot;\_label.png&quot; or &quot;\_label.tif&quot; (see examples below).
 
@@ -103,7 +103,8 @@ After clicking the &quot;Run&quot; button, the progress of the processing can be
 
 As an example, in the figure below there is a set of example images used to run the multiple images routine, the files created after running the plugin, as well as a table explaining the outcome for each label.
 
-<div style="text-align:center"><img src="./Images/Example-Folders.png" /></div>
+<div style="text-align:center"><img src="./Images/Example-Folders.png" width="800"/></div>
+
 
 | **Original image** | **Label Image** | **Result** | **Comments** |
 | --- | --- | --- | --- |
