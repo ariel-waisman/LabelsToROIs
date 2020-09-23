@@ -1,6 +1,4 @@
-# LabelToROis
-
-Labels\_To\_ROIs
+# LabelsToROIs
 
 **Labels\_To\_ROIs documentation**
 
@@ -26,7 +24,7 @@ Another way of identifying objects in images is by labelling them with unique id
 
 There are two basic ways to use this plugin:
 
-<div style="text-align:center"><img src="./Images/Plugin-Window1.png" width="400"/></div>
+<div style="text-align:center" align="center"><img src="./Images/Plugin-Window1.png" width="400"/></div>
 
 1. **Single image**
 
