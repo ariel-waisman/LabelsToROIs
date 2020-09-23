@@ -103,7 +103,7 @@ After clicking the &quot;Run&quot; button, the progress of the processing can be
 
 As an example, in the figure below there is a set of example images used to run the multiple images routine, the files created after running the plugin, as well as a table explaining the outcome for each label.
 
-![](./Images/Example-Folders.png)
+<div style="text-align:center"><img src="./Images/Example-Folders.png" /></div>
 
 | **Original image** | **Label Image** | **Result** | **Comments** |
 | --- | --- | --- | --- |
@@ -111,5 +111,3 @@ As an example, in the figure below there is a set of example images used to run 
 | - | Phalloidin\_02\_label.png | Only ROIs saved | Original image not included |
 | **-** | Phalloidin\_03.png | Nothing | Wrong naming scheme |
 | Phalloidin\_4.tif | Phalloidin\_04\_label.png | Only ROIs saved | Names not matching |
-
-3
