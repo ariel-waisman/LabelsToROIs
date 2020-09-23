@@ -30,11 +30,12 @@ There are two basic ways to use this plugin:
 
 Generates ROIs from a single label image, with or without the original image. Allows to erode/dilate the ROIs by a specific pixel value and to dynamically update them, save them and generate measurements as CSV tables.
 
-1. **Multiple images**
+2. **Multiple images**
 
 Generates and automatically saves the ROIs for multiple label images. It allows to erode/dilate them by a specific pixel value. If the original images are also provided, it generates table measurements, which are automatically saved as CSV files.
 
-1. **Single image**
+----------
+### 1. **Single image**
 
 After choosing the &quot;Simple image&quot; button from the main menu, a new window dialog is displayed.
 
@@ -87,7 +88,8 @@ To generate table measurements, a shortcut to the Set Measurements dialog is add
 
 The table/s will be automatically saved to the same location as the original file, with the addition of the following substring &quot;\_Erosion\_0px\_Channel\_1.csv&quot;. For the example above, with 5-pixel erosion, the name of the table for channel 1 will be &quot;Phalloidin\_01&quot;\_Erosion\_0px5px\_Channel\_1.csv&quot;. If the original image has multiple channels, then multiple tables will be saved, one for each channel.
 
-1. **Multiple images**
+-------------------
+### 2. **Multiple images**
 
 The LabelsToROIs plugin also allows to generate ROIs from multiple image labels. After clicking on the &quot;Multiple Images&quot; button in the main dialog, a new dialog will be displayed. Here, you can browse for a specific location where the label images and, optionally, the original images are located.
 
