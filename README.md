@@ -16,7 +16,7 @@ FIJI/ImageJ is a powerful and user-friendly image analysis software widely adopt
 
 When analyzing images in biology, it is often desired to identify certain objects to generate specific measurements that can be later analyzed in detail. Whether these objects are cells, nuclei or other structures, a common strategy is to generate binary image masks where the objects of interest are distinguished from everything else by assigning two different colors to the pixels: either black for the background or white for the foreground (Fig. 1A,B). Then, it is fairly simple to use these binary masks as references to make, for instance, area or intensity measurements in the original image. In many cases, these binary images are created through an intensity threshold after staining the cells or tissues with specific dyes or antibodies that recognize the object of interest. It is important to note that the objects in these images can only be identified among each other because they are not connected, i.e., there are black pixels separating them.
 
-![](RackMultipart20200923-4-1mopjdg_html_cde51210c944981c.png)
+![](./Images/Example-Images.png)
 
 Figure 1. (A) Example of a laminin staining in a PFA fixed cross section of mouse skeletal muscle. (B) Binary mask corresponding to the myofibers. (C-D) Labels generated from the binary mask in grayscale (C) or with color coded labels (D).
 
@@ -26,7 +26,7 @@ Another way of identifying objects in images is by labelling them with unique id
 
 There are two basic ways to use this plugin:
 
-![](RackMultipart20200923-4-1mopjdg_html_ee7c0e5ce9653c2f.png)
+![](./Images/Plugin-Window1.png)
 
 1. **Single image**
 
@@ -40,13 +40,13 @@ Generates and automatically saves the ROIs for multiple label images. It allows 
 
 After choosing the &quot;Simple image&quot; button from the main menu, a new window dialog is displayed.
 
-![](RackMultipart20200923-4-1mopjdg_html_eb771f02b1dbd8a4.png)
+![](./Images/Plugin-Window2.png)
 
 Here, a label image must be selected using the browse button. The label image can be either in &quot;PNG&quot; or &quot;TIF&quot; format. Optionally, the original image corresponding to that label can be provided. The label and original images must have the same pixel resolution. If an original image is included, after pressing the &quot;Next&quot; button this image will be opened. The ROIs will begin populating the image and the progress can be followed through the progress bar. If only a label image is chosen, this image will be opened, and the ROIs will be displayed here. The time for this task to be completed highly depends on the image resolution and the number of objects to be converted to ROIs.
 
 After completing, a new dialog will become visible.
 
-![](RackMultipart20200923-4-1mopjdg_html_a05597e4a66757b3.png)
+![](./Images/Plugin-Window3.png)
 
 In this dialog you will be able to:
 
@@ -60,11 +60,11 @@ In some cases, the ROIs have to be slightly eroded/dilated to accurately identif
 
 _Useful note__: to easily navigate and inspect the image, you can zoom in or zoom out with Ctrl/Cmd &quot;+&quot; or &quot;-&quot;, after selecting the image. To move from the current field of view, you can press the keyboard space bar and the cursor will change into a hand, allowing you to move from that view after clicking and dragging on the image._
 
-![](RackMultipart20200923-4-1mopjdg_html_9c24bb05ed4a8927.png)
+![](./Images/Plugin-Window3-erosion0.png)
 
 After clicking the &quot;Update ROIs&quot; button, the modified ROIs will be displayed on the image. Different erosion values can be visually assessed, or you can return to the original ROIs by setting the pixel value to 0. To dilate the ROIs, enter a negative pixel value.
 
-![](RackMultipart20200923-4-1mopjdg_html_2ccba54171ca4408.png)
+![](./Images/Plugin-Window3-erosion5.png)
 
 **Saving ROIs and images with outlined ROIs**
 
@@ -89,7 +89,7 @@ The table/s will be automatically saved to the same location as the original fil
 
 The LabelsToROIs plugin also allows to generate ROIs from multiple image labels. After clicking on the &quot;Multiple Images&quot; button in the main dialog, a new dialog will be displayed. Here, you can browse for a specific location where the label images and, optionally, the original images are located.
 
-![](RackMultipart20200923-4-1mopjdg_html_9d7c4bfd7a109685.png)
+![](./Images/Plugin-Window4.png)
 
 In this case, all the label images must be stored in the same folder and must contain the substring &quot;\_label.png&quot; or &quot;\_label.tif&quot; at the end of the filename. If the user also wants to automatically generate measurements from the associated original images, these should also be included in the same folder as the label images. Importantly, the original image should be a TIF file whose filename must be the same as for the label image, except for the &quot;\_label.png&quot; or &quot;\_label.tif&quot; (see examples below).
 
@@ -103,7 +103,7 @@ After clicking the &quot;Run&quot; button, the progress of the processing can be
 
 As an example, in the figure below there is a set of example images used to run the multiple images routine, the files created after running the plugin, as well as a table explaining the outcome for each label.
 
-![](RackMultipart20200923-4-1mopjdg_html_d017de273dc650cf.png)
+![](./Images/Example-Folders.png)
 
 | **Original image** | **Label Image** | **Result** | **Comments** |
 | --- | --- | --- | --- |
