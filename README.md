@@ -2,11 +2,19 @@
 
 **LabelsToROIs documentation**
 
-Labels\_To\_ROIs is a FIJI/imageJ plugin that provides the tools to generate the regions of interest (ROIs) from label images. It also allows to adjust the size of these ROIs and to generate measurements from the original images in the different channels.
+LabelsToROIs is a FIJI/imageJ plugin that provides the tools to generate the regions of interest (ROIs) from label images. It also allows to adjust the size of these ROIs and to generate measurements from the original images in the different channels.
+
+**Instalation**
+
+Download the "Labels_To_Rois.py" file by downloading this repository as a compressed ZIP file.
+![](./Images/Installation.jpg)
+
+Copy the "Labels_To_Rois.py" file into the FIJI/ImageJ plugins folder and restart the program. You will find the plugin in the "plugins" tab of FIJI/ImageJ.
+
 
 **Why this plugin?**
 
-There have been many recent machine learning tools described for image segmentation and object detection that work astoundingly well, and probably much more to come. In many cases, these algorithms generate their output in the form of labeled images. For a computer scientist or a user well versed in image analysis using programming languages such as Python or MATLAB, the use of label images is common practice, and thus they can rapidly incorporate these algorithms to their everyday routines. However, other users without this specific knowledge are significantly more limited in taking advantage of these developmentstools.
+There have been many recent machine learning tools described for image segmentation and object detection that work astoundingly well, and probably much more to come. In many cases, these algorithms generate their output in the form of labeled images. For a computer scientist or a user well versed in image analysis using programming languages such as Python or MATLAB, the use of label images is common practice, and thus they can rapidly incorporate these algorithms to their everyday routines. However, other users without this specific knowledge are significantly more limited in taking advantage of these tools.
 
 FIJI/ImageJ is a powerful and user-friendly image analysis software widely adopted in the biological community. Within FIJI/ImageJ, the Regions of Interest (ROIs) are an effective way to identify objects prior to making different analyses. However, there is currently no easy nor efficient way for transforming the information stored in label images to ROIs. The objective of this plugin is to provide an easy to use tool to accomplish this.
 
@@ -57,7 +65,7 @@ In this dialog you will be able to:
 
 In some cases, the ROIs have to be slightly eroded/dilated to accurately identify the boundaries of the object of interest. This is particularly important when measuring the area or other associated measurements. To erode the ROIs, enter a specific pixel value in the text field and click on the &quot;Update ROIs&quot; button.
 
-_Useful note__: to easily navigate and inspect the image, you can zoom in or zoom out with Ctrl/Cmd &quot;+&quot; or &quot;-&quot;, after selecting the image. To move from the current field of view, you can press the keyboard space bar and the cursor will change into a hand, allowing you to move from that view after clicking and dragging on the image._
+*Useful note: to easily navigate and inspect the image, you can zoom in or zoom out with Ctrl/Cmd &quot;+&quot; or &quot;-&quot;, after selecting the image. To move from the current field of view, you can press the keyboard space bar and the cursor will change into a hand, allowing you to move from that view after clicking and dragging on the image.*
 
 ![](./Images/Plugin-Window3-erosion0.png)
 
@@ -86,7 +94,7 @@ To generate table measurements, a shortcut to the Set Measurements dialog is add
 
 </center>
 
-The table/s will be automatically saved to the same location as the original file, with the addition of the following substring &quot;\_Erosion\_0px\_Channel\_1.csv&quot;. For the example above, with 5-pixel erosion, the name of the table for channel 1 will be &quot;Phalloidin\_01&quot;\_Erosion\_0px5px\_Channel\_1.csv&quot;. If the original image has multiple channels, then multiple tables will be saved, one for each channel.
+The table/s will be automatically saved to the same location as the original file, with the addition of the following substring &quot;\_Erosion\_0px\_Channel\_1.csv&quot;. For the example above, with 5-pixel erosion, the name of the table for channel 1 will be &quot;Phalloidin\_01\_Erosion\_5px\_Channel\_1.csv&quot;. If the original image has multiple channels, then multiple tables will be saved, one for each channel.
 
 -------------------
 ### 2. **Multiple images**
