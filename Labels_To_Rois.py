@@ -137,9 +137,9 @@ class LabelToRoi_Task(SwingWorker):
         except ExecutionException, e:
             raise SystemExit, e.getCause()
 
-################################################################################################
-########################### Label to ROI Multiple ##############################################
-################################################################################################
+################################################################################
+########################### Label to ROI Multiple ##############################
+################################################################################
 class LabelToRoi_Multiple_Task(SwingWorker):
 
     def __init__(self, files, pix_erosion_mult,label_update):
@@ -295,9 +295,6 @@ class LabelToRoi_Multiple_Task(SwingWorker):
                    IJ.run("Close")
 
 
-
-
-
             else:
                 print "There is NOT an original image associated to this label"
 
@@ -380,14 +377,10 @@ frame1.setVisible(True)
 ###########################################################
 ####################  Window #2 ###########################
 ###########################################################
-
-
-
 frame2 = JFrame("LabelToRoi - Single Image: Choose paths")
 frame2.setLocation(100,100)
 frame2.setSize(450,200)
 frame2.setLayout(None)
-
 
 def f2_clic_browse1(event):
    print("Click browse 1")
@@ -399,11 +392,8 @@ def f2_clic_browse1(event):
       message = 'Path to original image %s' % fc.getSelectedFile()
       gvars['path_original_image'] = str(fc.getSelectedFile())
       f2_txt1.setText(gvars['path_original_image'])
-      gvars['path_JFileChooser'] = fc.getCurrentDirectory() 
-      
+      gvars['path_JFileChooser'] = fc.getCurrentDirectory()
 
-
-      
    else :
       message = 'Request canceled by user'
    print( message )
@@ -413,14 +403,14 @@ def f2_clic_browse2(event):
    print("Click browse 2")
    fc = JFileChooser()
    fc.setCurrentDirectory(gvars['path_JFileChooser'])
-   
+
    fc.setDialogTitle('Open label image')
    result = fc.showOpenDialog( None )
    if result == JFileChooser.APPROVE_OPTION :
       message = 'Path to label image %s' % fc.getSelectedFile()
       gvars['path_label_image'] = str(fc.getSelectedFile())
       f2_txt2.setText(str(gvars['path_label_image']))
-      gvars['path_JFileChooser'] = fc.getCurrentDirectory() 
+      gvars['path_JFileChooser'] = fc.getCurrentDirectory()
    else :
       message = 'Request canceled by user'
 
@@ -477,8 +467,6 @@ def update_progress(event):
         progressBar.value = event.newValue
 
 
-
-
 # Browse original image
 lbl1 = JLabel("Path to original image")
 lbl1.setBounds(40,20,200,20)
@@ -532,11 +520,9 @@ frame3.setLocation(100,100)
 frame3.setSize(450,250)
 frame3.setLayout(None)
 
-
 def f3_clic_update(event):
    print("Click Update")
    RoiEroder(int(f3_txt1.getText()))
-
 
 def f3_clic_SaveROIs(event):
    RM = RoiManager()        # we create an instance of the RoiManager class
@@ -554,7 +540,6 @@ def f3_clic_SaveROIs(event):
    IJ.saveAs(outlines_image, "JPG", path_to_simple_outline)
 
    JOptionPane.showMessageDialog(None, "ROIs saved to:\n%s\nOutline image saved to:\n%s" % (path_to_updated_ROIs, path_to_simple_outline))
-
 
 def f3_clic_measurements(event):
    print "Click Set Measurements"
@@ -629,11 +614,10 @@ def f3_clic_prev(event):
    del gvars['path_original_image']
    del gvars['path_label_image']
 
-def f3_clic_finish(event): # TERMINAR
+def f3_clic_finish(event): # Finish
    print "Click Finish"
    gvars["workingImage"].close() # When going back, close the current picture
    frame3.dispose()
-
 
 
 # Number of pixels to erode
@@ -642,7 +626,6 @@ lbl1.setBounds(110,30,160,20)
 f3_txt1 = JTextField(10)
 f3_txt1.setBounds(270, 30, 60,20)
 f3_txt1.setText(str(0))
-
 
 # Button Update
 f3_btn_update = JButton("Update ROIs", actionPerformed = f3_clic_update)
@@ -677,8 +660,6 @@ frame3.add(f3_btn_params)
 frame3.add(f3_btn_saveTable)
 frame3.add(f3_btn_prev)
 frame3.add(f3_btn_finish)
-
-
 
 frame3.setVisible(False)
 
@@ -738,8 +719,6 @@ def f4_clic_next(event):
        ### progress label
       f4_lbl3.setVisible(True)
 
-
-
 def update_progress_multiple(event):
    # Invoked when task's progress property changes.
    if event.propertyName == "progress":
@@ -789,22 +768,14 @@ f4_btn_prev.setBounds(40,135,100,20)
 f4_btn_next = JButton("Run", actionPerformed = f4_clic_next)
 f4_btn_next.setBounds(300,135,100,20)
 
-
-
 frame4.add(f4_lbl1)
 frame4.add(f4_btn_directory)
 frame4.add(f4_txt1)
-
 frame4.add(f4_lbl2)
 frame4.add(f4_txt2)
-
 frame4.add(f4_lbl3)
-
 frame4.add(f4_btn_params)
-
 frame4.add(f4_btn_prev)
 frame4.add(f4_btn_next)
-
 frame4.add(f4_progressBar)
-
 frame4.setVisible(False)
