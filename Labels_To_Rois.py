@@ -43,7 +43,7 @@ gvars['original_JFileChooser'] = fc.getCurrentDirectory()
 gvars['path_JFileChooser'] = gvars['original_JFileChooser']
 
 ###########################################################
-####################  Define SwingWorker ##################
+########## Single Image Labels to ROIs Class ##############
 ###########################################################
 
 class LabelToRoi_Task(SwingWorker):
@@ -137,9 +137,9 @@ class LabelToRoi_Task(SwingWorker):
         except ExecutionException, e:
             raise SystemExit, e.getCause()
 
-################################################################################
-########################### Label to ROI Multiple ##############################
-################################################################################
+###########################################################
+######### Multiple Images Labels to ROIs Class ############
+###########################################################
 class LabelToRoi_Multiple_Task(SwingWorker):
 
     def __init__(self, files, pix_erosion_mult,label_update):
@@ -320,9 +320,9 @@ class LabelToRoi_Multiple_Task(SwingWorker):
 
 
 
-###########################################################################
-
-# Definition of function RoiEroder
+###########################################################
+################# ROI Eroder Function  ####################
+###########################################################
 def RoiEroder(pixels):
    RM = RoiManager()        # we create an instance of the RoiManager class
    rm = RM.getRoiManager()  # "activate" the RoiManager otherwise it can behave strangely

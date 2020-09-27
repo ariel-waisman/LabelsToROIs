@@ -1,11 +1,11 @@
 # LabelsToROIs
 
-**LabelsToROIs documentation**
+
 
 LabelsToROIs is a FIJI/imageJ plugin that provides the tools to generate the regions of interest (ROIs) from label images. It also allows to adjust the size of these ROIs and to generate measurements from the original images in the different channels.
 
 **Instalation**
-
+-------------------
 Download the "Labels_To_Rois.py" file by downloading this repository as a compressed ZIP file.
 ![](./Images/Installation.jpg)
 
@@ -13,12 +13,14 @@ Copy the "Labels_To_Rois.py" file into the FIJI/ImageJ plugins folder and restar
 
 
 **Why this plugin?**
+-------------------
 
 There have been many recent machine learning tools described for image segmentation and object detection that work astoundingly well, and probably much more to come. In many cases, these algorithms generate their output in the form of labeled images. For a computer scientist or a user well versed in image analysis using programming languages such as Python or MATLAB, the use of label images is common practice, and thus they can rapidly incorporate these algorithms to their everyday routines. However, other users without this specific knowledge are significantly more limited in taking advantage of these tools.
 
 FIJI/ImageJ is a powerful and user-friendly image analysis software widely adopted in the biological community. Within FIJI/ImageJ, the Regions of Interest (ROIs) are an effective way to identify objects prior to making different analyses. However, there is currently no easy nor efficient way for transforming the information stored in label images to ROIs. The objective of this plugin is to provide an easy to use tool to accomplish this.
 
 **Brief introduction to label images**
+-------------------
 
 When analyzing images in biology, it is often desired to identify certain objects to generate specific measurements that can be later analyzed in detail. Whether these objects are cells, nuclei or other structures, a common strategy is to generate binary image masks where the objects of interest are distinguished from everything else by assigning two different colors to the pixels: either black for the background or white for the foreground (Fig. 1A,B). Then, it is fairly simple to use these binary masks as references to make, for instance, area or intensity measurements in the original image. In many cases, these binary images are created through an intensity threshold after staining the cells or tissues with specific dyes or antibodies that recognize the object of interest. It is important to note that the objects in these images can only be identified among each other because they are not connected, i.e., there are black pixels separating them.
 
@@ -28,7 +30,8 @@ When analyzing images in biology, it is often desired to identify certain object
 
 Another way of identifying objects in images is by labelling them with unique identifiers. Here, instead of all objects having the same color (white), each of them has a specific color that distinguishes it from the rest (Fig. 1C). This is especially useful for objects that are touching each other, and thus do not have any black background in between. Usually, label images are grayscale images, either of 8 or 16 bits, depending on the number of objects they have. For example, an 8-bit image has 256 different shades of gray, ranging from black to white. Thus, considering the background with value equals to 0, an 8-bit label image can store up to 255 objects. Similarly, a 16-bit image can store up to 65,535 objects. It is important to note that the pixel value of the objects in the label image works as an identifier and nothing else. Thus, to make the visualization of label images easier one can assign random colors to each object (Fig. 1D).
 
-**How to use Labels\_To\_ROis**
+**How to use LabelsToROis**
+-------------------
 
 There are two basic ways to use this plugin:
 
@@ -42,7 +45,7 @@ Generates ROIs from a single label image, with or without the original image. Al
 
 Generates and automatically saves the ROIs for multiple label images. It allows to erode/dilate them by a specific pixel value. If the original images are also provided, it generates table measurements, which are automatically saved as CSV files.
 
-----------
+-------------------
 ### 1. **Single image**
 
 After choosing the &quot;Simple image&quot; button from the main menu, a new window dialog is displayed.
@@ -96,8 +99,9 @@ To generate table measurements, a shortcut to the Set Measurements dialog is add
 
 The table/s will be automatically saved to the same location as the original file, with the addition of the following substring &quot;\_Erosion\_0px\_Channel\_1.csv&quot;. For the example above, with 5-pixel erosion, the name of the table for channel 1 will be &quot;Phalloidin\_01\_Erosion\_5px\_Channel\_1.csv&quot;. If the original image has multiple channels, then multiple tables will be saved, one for each channel.
 
--------------------
+
 ### 2. **Multiple images**
+-------------------
 
 The LabelsToROIs plugin also allows to generate ROIs from multiple image labels. After clicking on the &quot;Multiple Images&quot; button in the main dialog, a new dialog will be displayed. Here, you can browse for a specific location where the label images and, optionally, the original images are located.
 
