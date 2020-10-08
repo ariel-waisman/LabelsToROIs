@@ -97,7 +97,7 @@ To generate table measurements, a shortcut to the Set Measurements dialog is add
 
 </center>
 
-The table/s will be automatically saved to the same location as the original file, with the addition of the following substring &quot;\_Erosion\_0px\_Channel\_1.csv&quot;. For the example above, with 5-pixel erosion, the name of the table for channel 1 will be &quot;Phalloidin\_01\_Erosion\_5px\_Channel\_1.csv&quot;. If the original image has multiple channels, then multiple tables will be saved, one for each channel.
+The table/s will be automatically saved to the same location as the original file, with the addition of the following substring &quot;\_Erosion\_0px\_Channel\_1.csv&quot;. For the example above, with 5-pixel erosion, the name of the table for channel 1 will be &quot;Phalloidin\_01\_Erosion\_5px\_Channel\_1.csv&quot;. If the original image has multiple channels, then multiple tables will be saved, one for each channel. Additionally, a table containing the measurements of all channels will be generated and named with the suffix "AllChannels.csv". For the previous example, the name would be "Phalloidin_01_Erosion_5px_AllChannels.csv".
 
 
 ### 2. **Multiple images**
@@ -113,7 +113,7 @@ After correctly saving all the images with their appropriate filenames within th
 
 An important consideration is that all images analyzed in batch will be subjected to the same erosion/dilation, which can be indicated in the text field. Thus, it is important to previously explore the amount of erosion/dilation appropriate for that set of images by analyzing a representative image in the &quot;Single image&quot; pipeline.
 
-In case an original image is also included, a CSV table will also be created for each specific channel. The different desired measurements can be indicated with the shortcut to the Set Measurements dialog.
+In case an original image is also included, a CSV table will also be created for each specific channel. The different desired measurements can be indicated with the shortcut to the Set Measurements dialog. Additionally, a table containing all the measurements from all the images and all the channels will be generated with the name "Full_results_table_Erosion_x_px.csv", where "x" are the number of pixels eroded. With this table, users with basic knowledge of data analysis in R or Python can use it as input for their analyses.
 
 After clicking the &quot;Run&quot; button, the progress of the processing can be visualized with the progress bar. In this case, the images will not be displayed. The ROI files as well as the CSV tables will be saved to the same input directory, following the same naming scheme as indicated in the &quot;Single image&quot; section. Additionally, JPG images with the outlined ROIs will also be automatically saved.
 
