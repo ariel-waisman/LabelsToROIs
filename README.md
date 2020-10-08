@@ -4,7 +4,7 @@
 
 LabelsToROIs is a FIJI/imageJ plugin that provides the tools to generate the regions of interest (ROIs) from label images. It also allows to adjust the size of these ROIs and to generate measurements from the original images in the different channels.
 
-**Instalation**
+**Installation**
 -------------------
 Download the "Labels_To_Rois.py" file by downloading this repository as a compressed ZIP file.
 ![](./Images/Installation.jpg)
