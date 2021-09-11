@@ -93,6 +93,7 @@ class LabelToRoi_Task(SwingWorker):
                  roi.setName(str(int(current_pixel_value)).zfill(max_digits))
                  rm.addRoi(roi)
 
+                 ip.setColor(0); # Fix 32 bit issue
                  ip.fill(roi) # Much faster than IJ.run(imp2, "Fill", ....
 
                  # Update ProgressBar
@@ -222,6 +223,7 @@ class LabelToRoi_Multiple_Task(SwingWorker):
                      roi.setName(str(int(current_pixel_value)).zfill(max_digits))
                      rm.addRoi(roi)
 
+                     ip.setColor(0); # Fix 32 bit issue
                      ip.fill(roi) # Much faster than IJ.run(imp2, "Fill", ....
 
                      # Update ProgressBar
